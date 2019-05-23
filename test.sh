@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 DIRECTORY=$1
 GOOD_RESULT="End of script - Comparison ended successfully"
 FAILED=0
@@ -6,7 +6,7 @@ FAILED=0
 for i in $(find . -name '*.tst' | sort); do
 
     SIMULATION_RESULT=$(sh tools/HardwareSimulator.sh $i;)
-    if [[ "$SIMULATION_RESULT" == "$GOOD_RESULT" ]];
+    if [ "$SIMULATION_RESULT" == "$GOOD_RESULT" ];
     then
         echo "$i - tests passed"
     else
@@ -16,7 +16,7 @@ for i in $(find . -name '*.tst' | sort); do
 
 done
 
-if [[ "$FAILED" == "1" ]];
+if [ "$FAILED" == "1" ];
 then
     echo "Tests failed!";
     exit 1;
