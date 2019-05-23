@@ -1,0 +1,6 @@
+language: generic
+
+script:
+  - bash test.sh
+
+jdk: openjdk8
