@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 DIRECTORY=$1
 GOOD_RESULT="End of script - Comparison ended successfully"
 FAILED=0
