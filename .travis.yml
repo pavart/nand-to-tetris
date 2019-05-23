@@ -2,3 +2,5 @@ language: bash
 
 script:
   - sh test.sh
+
+jdk: openjdk8
