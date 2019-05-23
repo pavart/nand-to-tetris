@@ -1,6 +1,6 @@
 language: generic
 
 script:
-  - sh test.sh
+  - bash test.sh
 
 jdk: openjdk8
