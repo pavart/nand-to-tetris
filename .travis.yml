@@ -4,5 +4,6 @@ script:
   - bash 01/test.sh
   - bash 02/test.sh
   - bash 03/test.sh
+  - bash 04/test.sh
 
 jdk: openjdk8
