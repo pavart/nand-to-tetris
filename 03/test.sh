@@ -1,9 +1,8 @@
 #!/bin/bash
-DIRECTORY=$1
 GOOD_RESULT="End of script - Comparison ended successfully"
 FAILED=0
 
-for i in $(find . -name '*.tst' | sort); do
+for i in $(find ./03 -name '*.tst' | sort); do
 
     SIMULATION_RESULT=$(sh tools/HardwareSimulator.sh $i;)
     if [[ "$SIMULATION_RESULT" == "$GOOD_RESULT" ]];
@@ -21,5 +20,5 @@ then
     echo "Tests failed!";
     exit 1;
 else
-    echo "All tests passed!"
+    echo "Tests passed"
 fi
