@@ -4,7 +4,6 @@ FAILED=0
 
 for i in $(find ./04 -name '*.tst' | sort); do
 
-    echo $i;
     SIMULATION_RESULT=$(sh tools/CPUEmulator.sh $i;)
     if [[ "$SIMULATION_RESULT" == "$GOOD_RESULT" ]];
     then
